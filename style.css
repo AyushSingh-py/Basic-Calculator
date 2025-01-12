@@ -1,0 +1,100 @@
+/* General body styling */
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f4f4f4;
+    margin: 0;
+    flex-direction: column; /* Allows stacking the heading and calculator */
+}
+
+/* Heading styling */
+.calculator-heading {
+    font-size: 2em;
+    margin-bottom: 20px;
+    color: #333;
+    text-align: center;
+}
+
+/* Calculator container styling */
+.calculator {
+    width: 320px;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+}
+
+/* Display styling */
+.display {
+    background-color: #222;
+    color: white;
+    padding: 10px;
+    text-align: right;
+}
+
+.display input {
+    width: 100%;
+    border: none;
+    background: none;
+    color: white;
+    font-size: 2em;
+    text-align: right;
+    padding: 10px;
+    outline: none;
+}
+
+/* Button grid styling */
+.buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+}
+
+button {
+    font-size: 1.5em;
+    padding: 20px;
+    border: none;
+    background: #f4f4f4;
+    cursor: pointer;
+    outline: none;
+    border: 1px solid #ddd;
+    transition: background 0.2s ease;
+}
+
+/* Button hover and active effects */
+button:hover {
+    background: #ddd;
+}
+
+button:active {
+    background: #bbb;
+}
+
+/* Styling for operator buttons */
+button:nth-child(4n),
+button:last-child {
+    background: #ff9500;
+    color: white;
+}
+
+button:nth-child(4n):hover,
+button:last-child:hover {
+    background: #e08900;
+}
+
+button:nth-child(4n):active,
+button:last-child:active {
+    background: #c47200;
+}
+
+/* Special button styling */
+button:nth-last-child(3) {
+    background: #f44336;
+    color: white;
+}
+
+button:nth-last-child(3):hover {
+    background: #d32f2f;
+}
